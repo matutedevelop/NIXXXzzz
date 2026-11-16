@@ -69,7 +69,16 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
 
   boot.loader.systemd-boot.enable = false;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelPackages = pkgs.linuxPackages.extend (final: prev: {
+    lenovo-legion-module = prev.lenovo-legion-module.overrideAttrs (old: {
+      postInstall = (old.postInstall or "") + ''
+        for f in $(find $out -name '*.ko*' ! -name '*.cer'); do
+          touch "''${f%%.ko*}.ko.cer"
+        done
+      '';
+    });
+  });
   boot.loader.grub.configurationLimit = 5;
 
 

@@ -13,8 +13,8 @@
   # FAN SHIT
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" "lenovo_legion_module" "it87" "coretemp" "nct6775" ];
-  boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
+  #boot.kernelModules = [ "kvm-intel" "lenovo_legion_module" "it87" "coretemp" "nct6775" ];
+  boot.kernelModules = [ "kvm-intel" "it87" "coretemp" "nct6775" ];
   hardware.sensor.iio.enable = true;
   services.udev.extraRules = ''
     KERNEL=="hidraw*", ATTRS{idVendor}=="048d", ATTRS{idProduct}=="c965", MODE="0666"

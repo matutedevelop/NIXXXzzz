@@ -283,40 +283,40 @@ with pkgs;
   bun
 
   # # R
-  (rstudioWrapper.override {
-    packages = with rPackages; [
-      tidyverse
-      fpp3
-      httr
-      ggplot2
-      knitr
-      rmarkdown
-      tidyverse
-      fpp3
-
-      learnr
-      nycflights13
-
-      #     here
-      #     rmarkdown
-      #
-      #
-      #     # agricolae
-      #     # EnvStats
-      #     # rmarkdown
-      #     # fastDummies
-      #     # knitr
-      #     # yaml
-      #     # htmltools
-      #     # dplyr
-      #     # ggplot2
-      #     # languageserver
-      #     # readxl
-      #     # moments
-      #     # BSDA
-      #     # tidyr
-    ];
-  })
+  # (rstudioWrapper.override {
+  #   packages = with rPackages; [
+  #     tidyverse
+  #     fpp3
+  #     httr
+  #     ggplot2
+  #     knitr
+  #     rmarkdown
+  #     tidyverse
+  #     fpp3
+  #
+  #     learnr
+  #     nycflights13
+  #
+  #     #     here
+  #     #     rmarkdown
+  #     #
+  #     #
+  #     #     # agricolae
+  #     #     # EnvStats
+  #     #     # rmarkdown
+  #     #     # fastDummies
+  #     #     # knitr
+  #     #     # yaml
+  #     #     # htmltools
+  #     #     # dplyr
+  #     #     # ggplot2
+  #     #     # languageserver
+  #     #     # readxl
+  #     #     # moments
+  #     #     # BSDA
+  #     #     # tidyr
+  #   ];
+  # })
   # (rWrapper.override {
   #   packages = with rPackages; [
   #     #
