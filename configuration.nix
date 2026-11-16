@@ -70,7 +70,7 @@
 
   boot.loader.systemd-boot.enable = false;
   #boot.kernelPackages = pkgs.linuxPackages;
-  boot.kernelPackages = pkgs.linuxPackages.extend (final: prev: {
+  boot.kernelPackages = pkgs.linuxPackages_zen.extend (final: prev: {
     lenovo-legion-module = prev.lenovo-legion-module.overrideAttrs (old: {
       postInstall = (old.postInstall or "") + ''
         for f in $(find $out -name '*.ko*' ! -name '*.cer'); do
