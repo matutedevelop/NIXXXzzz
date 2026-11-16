@@ -222,25 +222,21 @@ with pkgs;
     pywal
     graphviz
     optuna
-    #colorthief
-    #colorzero
-    #colormath
     pympler
 
-    # flet  broken
-    # flet-web
-    # flet-desktop
+    nicegui
+    rich
     selenium
     webdriver-manager
 
     pyspark
     duckdb
-    #snowflake
-    #dlt
 
     fastapi
     uvicorn
+
     prefect
+    wandb
     #bcrypt
     #pymc
     #arviz

@@ -91,6 +91,7 @@
         "format": "󰸉 ",
         "tooltip-format": "Left Click: Change wallpaper\nRight Click: Select Wallpaper",
         "on-click": "set-wallpaper",
+        "on-click-right": "waypaper",
     },
 
     // Theme (dark light)

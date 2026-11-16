@@ -341,6 +341,8 @@ in
     # matugen
     ".config/matugen".source = ./configs/matugen;
 
+    # waypaper
+    ".config/waypaper/config.ini".source = configs/Wallpapers/waypaper/config.ini;
 
 
   };
