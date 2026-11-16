@@ -247,6 +247,7 @@
             [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
               "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+              #"ALT, comma, code:1${toString i}, movetoworkspace, ${toString ws}"
 
               # "$mod, ${toString ws}, workspace, ${toString ws}"
               # "$mod SHIFT, ${toString ws}, movetoworkspace, ${toString ws}"

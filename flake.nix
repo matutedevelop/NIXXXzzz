@@ -58,7 +58,7 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.home-manager
-        nixos-hardware.nixosModules.lenovo-legion-16iax10h
+        #nixos-hardware.nixosModules.lenovo-legion-16iax10h
         hermes-agent.nixosModules.default
 
         {

@@ -23,8 +23,8 @@ in
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.graphite-gtk-theme;
-      name = "Graphite-Dark";
+      package = pkgs.colloid-gtk-theme;
+      name = "dark";
     };
     font = {
       name = "IosevkaTerm Nerd Font";
@@ -116,8 +116,12 @@ in
 
   programs.git = {
     enable = true;
-    userName = "arroio";
-    userEmail = "juan.arroyo@iteso.mx";
+    settings = {
+      user = {
+        name = "arroio";
+        email = "juan.arroyo@iteso.mx";
+      };
+    };
   };
 
   programs.starship = {

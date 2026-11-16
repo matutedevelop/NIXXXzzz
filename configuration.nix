@@ -69,7 +69,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
 
   boot.loader.systemd-boot.enable = false;
-  boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.grub.configurationLimit = 5;
 
 

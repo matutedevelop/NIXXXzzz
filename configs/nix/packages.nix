@@ -30,6 +30,7 @@ with pkgs;
   ripgrep
   btop
   fd
+  postman
 
 
   # gpu
@@ -68,6 +69,7 @@ with pkgs;
   inputs.zen-browser.packages.${pkgs.system}.default
   chromium
   chromedriver
+  playwright-driver
 
 
 
@@ -93,14 +95,14 @@ with pkgs;
   fastfetch
   nemo-with-extensions
   waypaper
-  cavalier
+  #cavalier
   vlc
   vesktop
   davinci-resolve
   libreoffice-fresh
   matugen
 
-  lenovo-legion
+  #lenovo-legion
   liquidctl
   coolercontrol.coolercontrol-gui
 
@@ -167,7 +169,7 @@ with pkgs;
 
 
   # python
-  uv
+  #uv
   maturin
   (python313.withPackages (ps: with ps; [
 
@@ -191,8 +193,8 @@ with pkgs;
 
     fastparquet
     xlib
-    mpl-typst
-    typst
+    #mpl-typst
+    #typst
     #plotly
     pandas
     openpyxl
@@ -211,13 +213,15 @@ with pkgs;
     kneed
     umap-learn
     statsmodels
+    patsy
     # torch
-    #torchWithCuda
+ #torchWithCuda
     #torch-bin
     yfinance
     jax
     cupy
     numba
+    dask
     pydantic
     pywal
     graphviz
@@ -231,15 +235,18 @@ with pkgs;
 
     pyspark
     duckdb
+    huggingface-hub
 
     fastapi
     uvicorn
 
     prefect
     wandb
+    # mlflow
     #bcrypt
     #pymc
     #arviz
+    playwright
 
   ]))
   ty
@@ -276,42 +283,62 @@ with pkgs;
   bun
 
   # # R
-  # (rstudioWrapper.override {
-  #   packages = with rPackages; [
-  #     AmesHousing
-  #     agricolae
-  #     EnvStats
-  #     rmarkdown
-  #     fastDummies
-  #     knitr
-  #     yaml
-  #     htmltools
-  #     dplyr
-  #     ggplot2
-  #     languageserver
-  #     readxl
-  #     moments
-  #     BSDA
-  #     tidyr
-  #   ];
-  # })
+  (rstudioWrapper.override {
+    packages = with rPackages; [
+      tidyverse
+      fpp3
+      httr
+      ggplot2
+      knitr
+      rmarkdown
+      tidyverse
+      fpp3
+
+      learnr
+      nycflights13
+
+      #     here
+      #     rmarkdown
+      #
+      #
+      #     # agricolae
+      #     # EnvStats
+      #     # rmarkdown
+      #     # fastDummies
+      #     # knitr
+      #     # yaml
+      #     # htmltools
+      #     # dplyr
+      #     # ggplot2
+      #     # languageserver
+      #     # readxl
+      #     # moments
+      #     # BSDA
+      #     # tidyr
+    ];
+  })
   # (rWrapper.override {
   #   packages = with rPackages; [
-  #
+  #     #
+  #     tidyverse
+  #     fpp3
+  #     here
   #     rmarkdown
-  #     fastDummies
-  #     knitr
-  #     yaml
-  #     htmltools
-  #     dplyr
-  #     ggplot2
-  #     languageserver
-  #     readxl
-  #     moments
-  #     BSDA
-  #
-  #
+  #     #     fastDummies
+  #     #     knitr
+  #     #     yaml
+  #     #     htmltools
+  #     #     dplyr
+  #     #     ggplot2
+  #     #     languageserver
+  #     #     readxl
+  #     #     moments
+  #     #     BSDA
+  #     #
+  #     #
   #   ];
   # })
+
+  # positron-bin
 
 ]
