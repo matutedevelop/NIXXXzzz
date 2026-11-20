@@ -183,6 +183,7 @@ with pkgs;
     ipywidgets
     ipycanvas
     marimo
+    ruff
 
     unidecode
     nltk

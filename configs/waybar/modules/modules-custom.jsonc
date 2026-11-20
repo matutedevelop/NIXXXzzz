@@ -90,7 +90,7 @@
     "custom/wallpaper": {
         "format": "󰸉 ",
         "tooltip-format": "Left Click: Change wallpaper\nRight Click: Select Wallpaper",
-        "on-click": "set-wallpaper",
+        "on-click": "waypaper",
         "on-click-right": "waypaper",
     },
 

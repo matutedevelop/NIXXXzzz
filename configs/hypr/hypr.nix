@@ -28,7 +28,6 @@
         hl.exec_cmd("swaync")
         hl.exec_cmd("waybar")
         hl.exec_cmd("hyprpaper")
-        hl.exec_cmd("set-wallpaper")
         hl.exec_cmd("hypridle")
         hl.exec_cmd("hyprlock")
       end)

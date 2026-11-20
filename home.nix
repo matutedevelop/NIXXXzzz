@@ -22,10 +22,13 @@ in
 
   gtk = {
     enable = true;
-    theme = {
-      package = pkgs.colloid-gtk-theme;
-      name = "dark";
-    };
+    # theme = {
+    #   package = pkgs.colloid-gtk-theme;
+    #   name = "dark";
+    # };
+    theme = { name = "Adwaita-dark"; package = pkgs.gnome-themes-extra; };
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
     font = {
       name = "IosevkaTerm Nerd Font";
       size = 14;
